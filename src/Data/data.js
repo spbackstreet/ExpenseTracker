@@ -2,7 +2,7 @@ const data = [
     {
         animationEnabled: true,
         title: {
-            text: "Expense Tracker"
+            text: "Expense Tracker 2021"
         },
         subtitles: [{
             text: "January",
@@ -28,7 +28,7 @@ const data = [
     {
         animationEnabled: true,
         title: {
-            text: "Expense Tracker"
+            text: "Expense Tracker 2021"
         },
         subtitles: [{
             text: "February",
@@ -54,7 +54,7 @@ const data = [
     },    {
         animationEnabled: true,
         title: {
-            text: "Expense Tracker"
+            text: "Expense Tracker 2021"
         },
         subtitles: [{
             text: "March",
@@ -79,7 +79,7 @@ const data = [
     },    {
         animationEnabled: true,
         title: {
-            text: "Expense Tracker"
+            text: "Expense Tracker 2021"
         },
         subtitles: [{
             text: "April",
@@ -106,7 +106,7 @@ const data = [
     },    {
         animationEnabled: true,
         title: {
-            text: "Expense Tracker"
+            text: "Expense Tracker 2021"
         },
         subtitles: [{
             text: "May",
