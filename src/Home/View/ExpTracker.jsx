@@ -125,25 +125,36 @@ class MultiSeriesAreaChart extends Component {
                                                             </form>
                                                             <CanvasJSChart options={this.state.options} />
                                                             <div className="mb-5" />
-                                                            {
-                                                                this.state.options.data[0].dataPoints.map((item, index) => {
+                                                            <table style={{ color: "black", width: "100%" }}>
+                                                                <tr>
+                                                                    <th style={{ "fontWeight": "bold" }}>Category :</th>
+                                                                    <th>Amount Spent :</th>
+                                                                </tr>
+                                                                <hr style={{ width: "180%" }} />
+
+                                                                {this.state.options.data[0].dataPoints.sort((a, b) => {
+                                                                    return b.y - a.y;
+                                                                }).map((item, index) => {
                                                                     return (
-                                                                        <div class="form-group" key={index}>
-                                                                            <b>{item.name} : </b>
-                                                                            {this.state.options.subtitles[0].amount * item.y / 100}</div>
+                                                                        <tr key={index}>
+                                                                            <td style={{ "fontWeight": "bold" }}>{item.name} :</td>
+                                                                            <td>{this.state.options.subtitles[0].amount * item.y / 100}</td>
+                                                                        </tr>
                                                                     )
                                                                 })
-                                                            }
+                                                                }
+                                                            </table>
+
                                                             <div className="row" style={{ marginTop: "25px" }}>
                                                                 <div className="col-6 col-sm-6">
                                                                     <button type="button" className="jio-btn jio-btn jio-btn-primary bg-transparent primary-c1 w-100 mb-2 mr-1"
                                                                         onClick={() => this.goToPreviousMonth()}
-                                                                    >Previous</button>
+                                                                    >Previous Month</button>
                                                                 </div>
                                                                 <div className="col-6 col-sm-6">
                                                                     <button type="button" className="jio-btn jio-btn jio-btn-primary w-100 mb-2 ml-1"
                                                                         onClick={() => this.goToNextMonth()}
-                                                                    >Next</button>
+                                                                    >Next Month</button>
                                                                 </div>
                                                             </div>
                                                         </div>
